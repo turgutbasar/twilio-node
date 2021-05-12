@@ -285,7 +285,7 @@ declare class FlowInstance extends SerializableClass {
    */
   toJSON(): any;
   url: string;
-  version_: number;
+  version: number;
 }
 
 
