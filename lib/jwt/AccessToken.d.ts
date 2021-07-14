@@ -151,6 +151,34 @@ declare namespace AccessToken {
     endpointId?: string;
   }
 
+  export interface SpockGrantOptions {
+    serviceSid?: string;
+    endpointId?: string;
+  }
+
+  export interface SpockGrantPayload {
+    service_sid?: string;
+    endpoint_id?: string;
+  }
+
+  export class SpockGrant extends Grant<
+      SpockGrantOptions,
+      SpockGrantPayload,
+      'spock'
+      > implements SpockGrantOptions {
+    serviceSid?: string;
+    endpointId?: string;
+  }
+
+  export class MrSpockGrant extends Grant<
+      SpockGrantOptions,
+      SpockGrantPayload,
+      'mrspock'
+      > implements SpockGrantOptions {
+    serviceSid?: string;
+    endpointId?: string;
+  }
+
   export interface VoiceGrantOptions {
     incomingAllow?: boolean;
     outgoingApplicationSid?: string;
