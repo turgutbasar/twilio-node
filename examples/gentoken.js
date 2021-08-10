@@ -2,9 +2,9 @@ const AccessToken = require('../lib/index').jwt.AccessToken;
 const SpockGrant = AccessToken.SpockGrant;
 
 // Used when generating any kind of tokens
-const twilioAccountSid = 'ACxx';
-const twilioApiKey = 'SKxx';
-const twilioApiSecret = 'secret';
+const twilioAccountSid = process.env.TWILIO_ACCOUNT_SID;
+const twilioApiKey = process.env.TWILIO_SIGNING_KEY_SID;
+const twilioApiSecret = process.env.TWILIO_SIGNING_KEY_SECRET;
 
 // Used specifically for creating Chat tokens
 const serviceSid = 'ISxx';
